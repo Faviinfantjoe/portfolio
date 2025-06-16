@@ -4,11 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Favil Infant Joe Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #0d1117;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    nav {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      animation: slideInLeft 1s ease-in-out;
+    }
+    .logo span {
+      color: #ff4c60;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ffb703;
+    }
+    #darkModeToggle {
+      background: #ffd700;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #121212;
+    }
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #a6c0fe, #f68084);
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      width: fit-content;
+      margin: auto;
+    }
+    .hero span {
+      color: #ffd700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .project {
+      background: #f0f0f0;
+      padding: 20px;
+      margin: 15px 0;
+      border-left: 6px solid #ffb703;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .project h3 {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #0d1117;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    @keyframes fadeInDown {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      0% { transform: translateX(-100px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+      }
+      #darkModeToggle {
+        width: 100%;
+      }
+      .hero {
+        height: auto;
+        padding: 30px 5px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .section {
+        padding: 30px 5px;
+      }
+      .section h2 {
+        font-size: 1.5rem;
+      }
+      .section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <nav>
       <div class="logo">Favil <span>Infant</span> Joe</div>
@@ -18,7 +193,6 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><button id="darkModeToggle">Dark Mode</button></li>
-        
       </ul>
     </nav>
   </header>
@@ -33,7 +207,7 @@
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-      I’m Favil Infant Joe, a passionate and dedicated BCA student at Don Bosco College, Dharmapuri. I have a keen interest in front-end web development and love creating clean, responsive, and visually appealing websites using HTML, CSS, and JavaScript. My goal is to become a professional web developer who not only builds functional digital experiences but also designs interfaces that are user-friendly and accessible. As a fresher, I continuously push myself to learn new technologies and enhance my problem-solving skills through real-world projects and creative experimentation. I believe in the power of consistent growth, collaboration, and coding with purpose. Whether it’s developing a personal portfolio or contributing to a larger project, I aim to deliver quality results with a strong sense of design and performance.
+      I’m Favil Infant Joe, a passionate and dedicated BCA student at Don Bosco College, Dharmapuri. I have a keen interest in front-end web development and love creating clean, responsive, and visually appealing websites using HTML, CSS, and JavaScript. My goal is to become a professional web developer who not only builds functional digital experiences but also designs interfaces that are user-friendly and accessible. As a fresher, I continuously push myself to learn new technologies and enhance my problem-solving skills through real-world projects and creative experimentation. I believe in the power of consistent growth, collaboration, and coding with purpose.
     </p>
   </section>
 
@@ -41,7 +215,7 @@
     <h2>Projects</h2>
     <div class="project">
       <h3>timeline edit's</h3>
-      <p>A web application for editor web name (Timeline edit's)   <a target="_blank" style="color: red;" href="https://timeline-edits-1.vercel.app/" tar>(web link)</a>.</p>
+      <p>A web application for editor web name (Timeline edit's) <a target="_blank" style="color: red;" href="https://timeline-edits-1.vercel.app/">(web link)</a>.</p>
     </div>
     <div class="project">
       <h3>Personal Portfolio</h3>
@@ -52,18 +226,24 @@
   <section id="contact" class="section">
     <h2>Contact Me</h2>
     <p>Email: <a style="color: red;" target="_blank" href="mailto:joefavilinfant@gmail.com">joefavilinfant@gmail.com</a></p>
-    <p>Instagram: 
-      <a target="_blank" style="color: red;" href="https://www.instagram.com/__favil__infant__joe?utm_source=ig_web_button_share_sheet&igsh=cGMzaXV1dXVpYTN1" >@_favilinfant_joe</a>
-    </p>
-    <p>Dm for paid collaboration: 👇</p>
-       <a target="_blank" style="color: red;" href="https://www.instagram.com/favil_infant_joe/?utm_source=ig_web_button_share_sheet">(Dm for this ID)</a>
-    </p>
+    <p>Instagram: <a target="_blank" style="color: red;" href="https://www.instagram.com/__favil__infant__joe">@_favilinfant_joe</a></p>
+    <p>Dm for paid collaboration: <a target="_blank" style="color: red;" href="https://www.instagram.com/favil_infant_joe/">(Dm for this ID)</a></p>
   </section>
 
   <footer>
     <p>© 2025 Favil Infant Joe. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if(document.body.classList.contains("dark-mode")){
+        darkModeToggle.textContent = "Light Mode";
+      } else {
+        darkModeToggle.textContent = "Dark Mode";
+      }
+    });
+  </script>
 </body>
 </html>
